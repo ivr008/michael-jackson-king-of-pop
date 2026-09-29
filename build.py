@@ -129,14 +129,50 @@ CONCERTS = [
            "the rehearsals became the acclaimed film This Is It."),
 ]
 
-# ---------------------------------------------------------------- albums
-ALBUMS = [
- ("Off the Wall", "1979", "Don't Stop 'Til You Get Enough \u00b7 Rock with You \u00b7 She's Out of My Life"),
- ("Thriller", "1982", "Billie Jean \u00b7 Beat It \u00b7 Thriller \u00b7 Wanna Be Startin' Somethin'"),
- ("Bad", "1987", "Bad \u00b7 The Way You Make Me Feel \u00b7 Man in the Mirror \u00b7 Smooth Criminal"),
- ("Dangerous", "1991", "Black or White \u00b7 Remember the Time \u00b7 In the Closet \u00b7 Heal the World"),
- ("HIStory", "1995", "Scream \u00b7 You Are Not Alone \u00b7 Earth Song \u00b7 They Don't Care About Us"),
- ("Invincible", "2001", "You Rock My World \u00b7 Butterflies \u00b7 Cry"),
+# ---------------------------------------------------------------- songs (album -> popular songs with official YouTube IDs)
+SONGS = [
+ ("Off the Wall", "1979", [
+   ("Don't Stop 'Til You Get Enough", "yURRmWtbTbo"),
+   ("Rock with You", "5X-Mrc2l1d0"),
+   ("Off the Wall", "MYPI0HZGVR4"),
+   ("She's Out of My Life", "6DQJPL9Yuq0"),
+ ]),
+ ("Thriller", "1982", [
+   ("Wanna Be Startin' Somethin'", "DsJlttdkybk"),
+   ("The Girl Is Mine", "wHuRX5Or3ts"),
+   ("Billie Jean", "Zi_XLOBDo_Y"),
+   ("Beat It", "oRdxUFDoQe0"),
+   ("Human Nature", "YNzuiRuQNYY"),
+   ("P.Y.T. (Pretty Young Thing)", "V-l28QqV3jo"),
+   ("Thriller", "sOnqjkJTMaA"),
+ ]),
+ ("Bad", "1987", [
+   ("I Just Can't Stop Loving You", "PHZ1Bii7Uwk"),
+   ("Bad", "Sd4SJVsTulc"),
+   ("The Way You Make Me Feel", "HzZ_urpj4As"),
+   ("Man in the Mirror", "PivWY9wn5ps"),
+   ("Dirty Diana", "yUi_S6YWjZw"),
+   ("Smooth Criminal", "h_D3VFfhvs4"),
+ ]),
+ ("Dangerous", "1991", [
+   ("Black or White", "F2AitTPI5U0"),
+   ("Remember the Time", "LeiFF0gvqcc"),
+   ("In the Closet", "4qLY0vbrT8Q"),
+   ("Jam", "JbHI1yI1Ndk"),
+   ("Heal the World", "BWf-eARnf6U"),
+ ]),
+ ("HIStory", "1995", [
+   ("Scream", "0P4A1K4lXDo"),
+   ("You Are Not Alone", "pAyKJAtDNCw"),
+   ("Earth Song", "XAi3VTSdTxU"),
+   ("They Don't Care About Us", "t1pqi8vjTLY"),
+   ("Stranger in Moscow", "pEEMi2j6lYE"),
+ ]),
+ ("Invincible", "2001", [
+   ("You Rock My World", "1-7ABIM2qjU"),
+   ("Butterflies", "QxnnAx9ED4M"),
+   ("Cry", "mj3MfUR35CM"),
+ ]),
 ]
 SOLO_EARLY = [
  ("Got to Be There", "1972"), ("Ben", "1972"), ("Music & Me", "1973"),
@@ -233,14 +269,19 @@ def fmt_concerts():
     return "".join(out)
 
 def fmt_albums():
-    rows = []
-    for name, year, singles in ALBUMS:
-        rows.append(f"""
+    out = []
+    for name, year, tracks in SONGS:
+        rows = []
+        for i, (title, vid) in enumerate(tracks, 1):
+            rows.append(
+                f'<li><button class="play" data-id="{vid}" aria-label="Play {html.escape(title)}">\u25b6</button>'
+                f'<span class="tnum">{i}</span><span class="tname">{html.escape(title)}</span></li>')
+        out.append(f"""
         <div class="album">
-          <div class="album-year">{year}</div>
-          <div class="album-main"><h3>{html.escape(name)}</h3><p>{html.escape(singles)}</p></div>
+          <div class="album-head"><span class="album-year">{year}</span><h3>{html.escape(name)}</h3></div>
+          <ul class="tracks">{''.join(rows)}</ul>
         </div>""")
-    return "".join(rows)
+    return "".join(out)
 
 def fmt_records():
     return "".join(f'<div class="stat"><span class="stat-n">{html.escape(n)}</span>'
@@ -261,6 +302,26 @@ def fmt_credits():
     return "".join(rows)
 
 HERO_IMG = ipath("mj-1992-bucharest")
+
+SONGS_JS = """
+<script>
+(function(){
+  var f=document.getElementById('ytPlayer'), ph=document.getElementById('playerPlaceholder'),
+      now=document.getElementById('nowPlaying'), box=document.getElementById('playerBox');
+  document.querySelectorAll('.play').forEach(function(b){
+    b.addEventListener('click',function(){
+      var li=b.closest('li'), name=li.querySelector('.tname').textContent, id=b.getAttribute('data-id');
+      f.src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1';
+      if(ph) ph.classList.add('hide');
+      if(now) now.textContent=name;
+      document.querySelectorAll('.play').forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active');
+      if(box && box.scrollIntoView && window.innerWidth<720) box.scrollIntoView({behavior:'smooth',block:'center'});
+    });
+  });
+})();
+</script>
+"""
 
 HTML = f"""<!DOCTYPE html>
 <html lang="en">
@@ -386,16 +447,38 @@ HTML = f"""<!DOCTYPE html>
   .concert-venue{{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem}}
   .concert-body p{{margin:0;color:#c8c8d2;font-size:.9rem}}
 
-  /* albums */
-  .albums{{display:grid;gap:.75rem}}
-  .album{{display:grid;grid-template-columns:5.5rem 1fr;gap:1rem;align-items:center;
-    background:linear-gradient(90deg,var(--panel),transparent);border:1px solid var(--line);
-    border-left:3px solid var(--red);border-radius:.6rem;padding:.9rem 1.1rem}}
-  .album-year{{font-family:"Bebas Neue",sans-serif;font-size:1.7rem;color:var(--gold)}}
-  .album-main h3{{margin:0 0 .15rem;font-size:1.1rem}}
-  .album-main p{{margin:0;color:var(--muted);font-size:.84rem}}
+  /* albums + song player */
+  .player{{position:sticky;top:62px;z-index:30;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);
+    gap:1rem;background:linear-gradient(180deg,#1c1c24,#141419);border:1px solid var(--line);border-radius:1rem;
+    padding:.9rem;margin-bottom:1.5rem;box-shadow:0 14px 34px rgba(0,0,0,.45)}}
+  .player-frame{{position:relative;aspect-ratio:16/9;border-radius:.6rem;overflow:hidden;background:#000;border:1px solid var(--line)}}
+  .player-frame iframe{{position:absolute;inset:0;width:100%;height:100%;border:0}}
+  .player-placeholder{{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;
+    color:var(--muted);font-weight:700;padding:1rem;font-size:.95rem;
+    background:radial-gradient(400px 200px at 50% 40%, rgba(224,11,43,.25), transparent 70%)}}
+  .player-placeholder.hide{{display:none}}
+  .player-info{{display:flex;flex-direction:column;justify-content:center;gap:.2rem}}
+  .player-now{{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--red);font-weight:700}}
+  .player-name{{font-family:"Bebas Neue",sans-serif;font-size:clamp(1.3rem,3vw,1.9rem);line-height:1.05}}
+  .player-note{{font-size:.72rem;color:var(--muted);margin-top:.35rem}}
+  .albums{{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(330px,1fr))}}
+  .album{{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);
+    border-left:3px solid var(--red);border-radius:.8rem;padding:1rem 1.1rem}}
+  .album-head{{display:flex;align-items:baseline;gap:.6rem;margin-bottom:.55rem;border-bottom:1px solid var(--line);padding-bottom:.5rem}}
+  .album-year{{font-family:"Bebas Neue",sans-serif;font-size:1.5rem;color:var(--gold)}}
+  .album-head h3{{margin:0;font-size:1.15rem}}
+  .tracks{{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.25rem}}
+  .tracks li{{display:flex;align-items:center;gap:.6rem;padding:.3rem .4rem;border-radius:.5rem;transition:background .15s}}
+  .tracks li:hover{{background:rgba(255,255,255,.05)}}
+  .tracks .play{{flex:none;width:30px;height:30px;border-radius:50%;border:0;background:var(--red);color:#fff;
+    font-size:.72rem;line-height:1;cursor:pointer;display:grid;place-items:center;transition:transform .12s,background .15s}}
+  .tracks .play:hover{{transform:scale(1.12)}}
+  .tracks .play.active{{background:var(--gold);color:#111}}
+  .tnum{{width:1rem;text-align:right;color:var(--muted);font-size:.76rem}}
+  .tname{{flex:1;font-weight:600;font-size:.9rem}}
   .early{{margin-top:1rem;color:var(--muted);font-size:.85rem}}
   .early b{{color:var(--text)}}
+  @media(max-width:720px){{.player{{grid-template-columns:1fr;position:static}}}}
 
   /* quotes */
   .quotes{{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}}
@@ -499,9 +582,21 @@ HTML = f"""<!DOCTYPE html>
   <div class="concerts">{fmt_concerts()}</div>
 </div></section>
 
-<!-- ALBUMS -->
+<!-- ALBUMS / SONGS -->
 <section id="albums"><div class="wrap">
-  <div class="sec-head"><div class="tag">Discography</div><h2>The Albums That Changed Music</h2></div>
+  <div class="sec-head"><div class="tag">Discography</div><h2>The Songs You Can Play</h2>
+    <p>The most popular song from every album — press <b>\u25b6</b> to play the official video right here. 🎵</p></div>
+  <div class="player" id="playerBox">
+    <div class="player-frame">
+      <iframe id="ytPlayer" title="Song player" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+      <div class="player-placeholder" id="playerPlaceholder">🎵 Pick a song below and press ▶</div>
+    </div>
+    <div class="player-info">
+      <div class="player-now">Now playing</div>
+      <div class="player-name" id="nowPlaying">Nothing yet…</div>
+      <div class="player-note">Plays the official video via YouTube. Songs © their respective owners.</div>
+    </div>
+  </div>
   <div class="albums">{fmt_albums()}</div>
   <p class="early"><b>Early solo albums:</b> {html.escape(' \u00b7 '.join(f"{n} ({y})" for n,y in SOLO_EARLY))}</p>
 </div></section>
@@ -540,6 +635,7 @@ HTML = f"""<!DOCTYPE html>
   </footer>
 </div>
 
+{SONGS_JS}
 </body>
 </html>
 """
