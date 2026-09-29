@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Michael Jackson — The King of Pop | A Fan Tribute</title>
+<meta name="description" content="A detailed fan tribute to Michael Jackson: his life story, career through the years, famous concerts and tours, records and legacy." />
+<meta property="og:title" content="Michael Jackson — The King of Pop" />
+<meta property="og:description" content="His life, his music, his concerts, his legacy — a fan tribute." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%A4%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg:#08080a; --panel:#131317; --panel2:#1a1a20; --line:#2a2a32;
+    --text:#f4f4f7; --muted:#a2a2af; --red:#e00b2b; --gold:#ffd23f;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth; scroll-padding-top:70px}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)}
+  .display{font-family:"Bebas Neue",sans-serif;letter-spacing:0.02em;font-weight:400}
+
+  /* nav */
+  nav.top{position:sticky;top:0;z-index:50;background:rgba(8,8,10,.82);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line)}
+  nav.top .inner{max-width:1180px;margin:0 auto;padding:.7rem clamp(1rem,4vw,2.5rem);
+    display:flex;align-items:center;justify-content:space-between;gap:1rem}
+  nav.top .logo{font-family:"Bebas Neue",sans-serif;font-size:1.35rem;letter-spacing:.06em}
+  nav.top .logo b{color:var(--red)}
+  nav.top .links{display:flex;gap:1.1rem;flex-wrap:wrap}
+  nav.top a{color:var(--muted);text-decoration:none;font-size:.82rem;font-weight:600;letter-spacing:.03em}
+  nav.top a:hover{color:var(--text)}
+
+  /* hero */
+  .hero{position:relative;min-height:82vh;display:flex;align-items:flex-end;overflow:hidden;
+    border-bottom:1px solid var(--line)}
+  .hero .bg{position:absolute;inset:0;background-image:url('images/mj-1992-bucharest.jpg');
+    background-size:cover;background-position:center 28%;filter:grayscale(.25) contrast(1.05)}
+  .hero .shade{position:absolute;inset:0;background:
+    linear-gradient(180deg,rgba(8,8,10,.55) 0%,rgba(8,8,10,.75) 55%,rgba(8,8,10,.97) 100%),
+    radial-gradient(700px 500px at 80% 20%, rgba(224,11,43,.28), transparent 60%)}
+  .hero .content{position:relative;z-index:2;padding:4rem 0 3rem;width:100%}
+  .hero .eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.35em;text-transform:uppercase;color:var(--gold)}
+  .hero h1{font-family:"Bebas Neue",sans-serif;font-size:clamp(3.4rem,13vw,9rem);line-height:.9;
+    margin:.3rem 0 .2rem;letter-spacing:.01em}
+  .hero h1 span{color:var(--red)}
+  .hero .kicker{font-family:"Dancing Script",cursive;font-size:clamp(1.6rem,4vw,2.6rem);color:#fff;opacity:.92}
+  .hero .dates{margin-top:1rem;font-size:.95rem;letter-spacing:.18em;color:var(--muted)}
+  .hero .cta{margin-top:1.6rem;display:flex;gap:.8rem;flex-wrap:wrap}
+  .btn{display:inline-block;padding:.7rem 1.4rem;border-radius:999px;text-decoration:none;
+    font-weight:700;font-size:.85rem;letter-spacing:.04em;border:1px solid var(--red);
+    background:var(--red);color:#fff;transition:.2s}
+  .btn.ghost{background:transparent;color:var(--text);border-color:#4a4a55}
+  .btn:hover{transform:translateY(-2px)}
+
+  /* section */
+  section{padding:clamp(2.5rem,6vw,4.5rem) 0}
+  .sec-head{margin-bottom:1.75rem}
+  .sec-head .tag{font-size:.74rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--red)}
+  .sec-head h2{font-family:"Bebas Neue",sans-serif;font-size:clamp(2.2rem,6vw,3.6rem);margin:.15rem 0 0;line-height:1}
+  .sec-head p{color:var(--muted);max-width:720px;margin:.6rem 0 0}
+
+  /* story */
+  .story{display:grid;grid-template-columns:1.4fr .9fr;gap:2.5rem;align-items:start}
+  .story p{color:#d7d7de;font-size:1.02rem;margin:0 0 1rem}
+  .story .card-img{border-radius:1rem;overflow:hidden;border:1px solid var(--line);position:sticky;top:80px}
+  .story .card-img img{width:100%}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem}
+  .stat{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);
+    border-radius:.9rem;padding:1.2rem 1.1rem}
+  .stat-n{font-family:"Bebas Neue",sans-serif;font-size:2.4rem;line-height:1;color:var(--gold);display:block}
+  .stat-l{font-size:.78rem;color:var(--muted);letter-spacing:.03em}
+
+  /* timeline */
+  .timeline{position:relative;margin-top:1rem}
+  .timeline:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;
+    background:linear-gradient(var(--red),transparent);transform:translateX(-50%)}
+  .tl-item{position:relative;width:50%;padding:0 2.2rem 2rem 0}
+  .tl-item.right{margin-left:50%;padding:0 0 2rem 2.2rem}
+  .tl-dot{position:absolute;top:.7rem;right:-9px;width:16px;height:16px;border-radius:50%;
+    background:var(--red);box-shadow:0 0 0 4px rgba(224,11,43,.22)}
+  .tl-item.right .tl-dot{right:auto;left:-9px}
+  .tl-card{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);
+    border-radius:.9rem;overflow:hidden;transition:.25s}
+  .tl-card:hover{border-color:rgba(224,11,43,.5);transform:translateY(-3px)}
+  .tl-img{aspect-ratio:16/9;overflow:hidden;background:#0a0a0c}
+  .tl-img img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+  .tl-body{padding:1rem 1.1rem 1.15rem}
+  .tl-year{font-family:"Bebas Neue",sans-serif;font-size:1.4rem;color:var(--gold);letter-spacing:.05em}
+  .tl-body h3{margin:.1rem 0 .35rem;font-size:1.12rem}
+  .tl-body p{margin:0;color:#c8c8d2;font-size:.9rem}
+
+  /* gallery */
+  .gallery{columns:3;column-gap:.9rem}
+  .g-item{break-inside:avoid;margin:0 0 .9rem;position:relative;border-radius:.7rem;overflow:hidden;
+    border:1px solid var(--line)}
+  .g-item img{width:100%;transition:transform .5s}
+  .g-item:hover img{transform:scale(1.06)}
+  .g-item figcaption{position:absolute;left:0;right:0;bottom:0;padding:.9rem .7rem .55rem;
+    font-size:.76rem;color:#fff;background:linear-gradient(transparent,rgba(8,8,10,.9))}
+
+  /* concerts */
+  .concerts{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem}
+  .concert{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);
+    border-radius:.9rem;overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+  .concert:hover{transform:translateY(-4px);border-color:rgba(224,11,43,.5)}
+  .concert-img{position:relative;aspect-ratio:16/10;overflow:hidden}
+  .concert-img img{width:100%;height:100%;object-fit:cover;object-position:center 20%;transition:transform .5s}
+  .concert:hover .concert-img img{transform:scale(1.06)}
+  .concert-year{position:absolute;top:.7rem;left:.7rem;background:rgba(8,8,10,.7);border:1px solid rgba(255,255,255,.18);
+    color:var(--gold);font-family:"Bebas Neue",sans-serif;font-size:1.05rem;padding:.1rem .55rem;border-radius:.4rem}
+  .concert-body{padding:1rem 1.1rem 1.2rem}
+  .concert-body h3{margin:0 0 .15rem;font-size:1.18rem}
+  .concert-venue{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--red);margin-bottom:.5rem}
+  .concert-body p{margin:0;color:#c8c8d2;font-size:.9rem}
+
+  /* albums */
+  .albums{display:grid;gap:.75rem}
+  .album{display:grid;grid-template-columns:5.5rem 1fr;gap:1rem;align-items:center;
+    background:linear-gradient(90deg,var(--panel),transparent);border:1px solid var(--line);
+    border-left:3px solid var(--red);border-radius:.6rem;padding:.9rem 1.1rem}
+  .album-year{font-family:"Bebas Neue",sans-serif;font-size:1.7rem;color:var(--gold)}
+  .album-main h3{margin:0 0 .15rem;font-size:1.1rem}
+  .album-main p{margin:0;color:var(--muted);font-size:.84rem}
+  .early{margin-top:1rem;color:var(--muted);font-size:.85rem}
+  .early b{color:var(--text)}
+
+  /* quotes */
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+  blockquote{margin:0;background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);
+    border-radius:.9rem;padding:1.4rem 1.3rem;font-family:"Dancing Script",cursive;font-size:1.4rem;color:#eee}
+  blockquote:before{content:"";display:block;width:34px;height:3px;background:var(--red);margin-bottom:.8rem}
+
+  /* credits */
+  details.credits{border-top:1px solid var(--line);margin-top:2rem;padding-top:1rem;color:var(--muted);font-size:.8rem}
+  details.credits summary{cursor:pointer;color:var(--text);font-weight:600;margin-bottom:.6rem}
+  details.credits ul{columns:2;column-gap:2rem;list-style:none;padding:0;margin:.4rem 0 0}
+  details.credits a{color:#8f8f9c}
+
+  footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-size:.8rem}
+
+  @media(max-width:820px){
+    .story{grid-template-columns:1fr} .story .card-img{position:static}
+    .gallery{columns:2}
+    .timeline:before{left:9px}
+    .tl-item,.tl-item.right{width:100%;margin-left:0;padding:0 0 1.6rem 2rem}
+    .tl-dot,.tl-item.right .tl-dot{left:1px;right:auto}
+    details.credits ul{columns:1}
+  }
+  @media(max-width:520px){.gallery{columns:1}}
+</style>
+</head>
+<body>
+
+<nav class="top"><div class="inner">
+  <div class="logo"><b>MJ</b> · KING OF POP</div>
+  <div class="links">
+    <a href="#story">Story</a><a href="#timeline">Timeline</a><a href="#years">Through the Years</a>
+    <a href="#concerts">Concerts</a><a href="#albums">Albums</a><a href="#legacy">Legacy</a>
+  </div>
+</div></nav>
+
+<header class="hero">
+  <div class="bg"></div><div class="shade"></div>
+  <div class="content wrap">
+    <div class="eyebrow">A Fan Tribute</div>
+    <h1>Michael <span>Jackson</span></h1>
+    <div class="kicker">The King of Pop</div>
+    <div class="dates">1958 · GARY, INDIANA &nbsp;—&nbsp; 2009 · LOS ANGELES, CALIFORNIA</div>
+    <div class="cta">
+      <a class="btn" href="#story">Explore His Story</a>
+      <a class="btn ghost" href="#concerts">Famous Concerts</a>
+    </div>
+  </div>
+</header>
+
+<!-- STORY -->
+<section id="story"><div class="wrap">
+  <div class="sec-head"><div class="tag">The Life</div><h2>A Once-in-a-Century Talent</h2></div>
+  <div class="story">
+    <div>
+      <p>Michael Joseph Jackson was born on August 29, 1958, in Gary, Indiana — the eighth of ten
+      children. From the moment he took the microphone as a small boy fronting his brothers, it was clear
+      he was different: a singer with the timing of a seasoned professional and a performer who seemed to
+      feel every note.</p>
+      <p>As the lead voice of the Jackson 5 he became a child star, and as a solo artist he became a
+      phenomenon. Working with producer Quincy Jones, he released a run of albums — <em>Off the Wall</em>,
+      <em>Thriller</em> and <em>Bad</em> — that reshaped pop music and made the music video a serious
+      art form. <em>Thriller</em> remains the best-selling album of all time.</p>
+      <p>He was a dancer of extraordinary invention, refining steps like the moonwalk into global
+      shorthand for genius. He was a perfectionist in the studio, a pioneer of spectacle on stage, and a
+      philanthropist whose charity work touched children across the world. He was, and remains, the
+      definitive pop icon — the benchmark against which everything since is measured.</p>
+      <p>His death on June 25, 2009, at the age of 50, prompted an outpouring of grief unmatched in the
+      history of popular culture. More than a decade later, his music is still streamed billions of times
+      a year by fans old and new.</p>
+    </div>
+    <div class="card-img"><img src="images/mj-1988.jpg" alt="Michael Jackson, 1988" /></div>
+  </div>
+</div></section>
+
+<!-- STATS -->
+<section style="padding-top:0"><div class="wrap">
+  <div class="stats"><div class="stat"><span class="stat-n">~400M+</span><span class="stat-l">Records sold worldwide</span></div><div class="stat"><span class="stat-n">70M+</span><span class="stat-l">Copies of Thriller</span></div><div class="stat"><span class="stat-n">13</span><span class="stat-l">Grammy Awards won</span></div><div class="stat"><span class="stat-n">8</span><span class="stat-l">Grammys in a single night (1984)</span></div><div class="stat"><span class="stat-n">4.5M</span><span class="stat-l">Fans on the HIStory World Tour</span></div><div class="stat"><span class="stat-n">#1</span><span class="stat-l">Billboard Hot 100 hits</span></div></div>
+</div></section>
+
+<!-- TIMELINE -->
+<section id="timeline"><div class="wrap">
+  <div class="sec-head"><div class="tag">Over the Years</div><h2>His Life &amp; Career, Decade by Decade</h2>
+    <p>From a six-year-old frontman in Gary, Indiana to the biggest star on the planet — the moments
+    that built the legend.</p></div>
+  <div class="timeline">
+        <div class="tl-item left">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/jackson5-1971.jpg" alt="A Star Is Born" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">1958</span>
+              <h3>A Star Is Born</h3>
+              <p>Michael Joseph Jackson is born on August 29 in Gary, Indiana — the eighth of ten children in a working-class family. By age five he is already singing in front of anyone who will listen.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item right">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/jackson5-1972.jpg" alt="The Jackson 5" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">1964</span>
+              <h3>The Jackson 5</h3>
+              <p>Michael joins brothers Jackie, Tito, Jermaine and Marlon in a family band that storms local talent shows across the Midwest. His voice — impossibly soulful for a child — makes him the obvious frontman.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item left">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/jackson5-1974.jpg" alt="Motown &amp; “I Want You Back”" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">1969</span>
+              <h3>Motown &amp; “I Want You Back”</h3>
+              <p>Signed to Motown, the Jackson 5&#x27;s debut single rockets to No. 1. An 11-year-old Michael is suddenly a national phenomenon.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item right">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/jackson5-michael.jpg" alt="Going Solo" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">1972</span>
+              <h3>Going Solo</h3>
+              <p>While still with his brothers, Michael releases solo singles — “Got to Be There” and “Ben,” the latter his first solo No. 1 hit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item left">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-1977.jpg" alt="The Wiz" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">1978</span>
+              <h3>The Wiz</h3>
+              <p>Michael stars as the Scarecrow in The Wiz and meets composer-producer Quincy Jones. The collaboration that follows will reshape popular music.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item right">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-1981-quincy.jpg" alt="Off the Wall" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">1979</span>
+              <h3>Off the Wall</h3>
+              <p>With Quincy Jones producing, Off the Wall sells roughly 20 million copies and turns Michael into a solo superstar — and the first solo artist to land four Top-10 singles from one album.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item left">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-1982.jpg" alt="Thriller" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">1982</span>
+              <h3>Thriller</h3>
+              <p>Released November 30, Thriller will become the best-selling album of all time, blending pop, rock, funk and disco behind “Billie Jean,” “Beat It” and the title track.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item right">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-1983.jpg" alt="The Moonwalk" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">1983</span>
+              <h3>The Moonwalk</h3>
+              <p>On the Motown 25 television special, Michael performs “Billie Jean” and debuts the moonwalk. It is instantly the most talked-about TV performance in pop history.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item left">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-1983-closeup.jpg" alt="Thriller’s Short Film" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">1983</span>
+              <h3>Thriller’s Short Film</h3>
+              <p>John Landis directs the 14-minute “Thriller” film — a horror-movie spectacle that makes the music video an art form and sets a new bar for the medium.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item right">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-1984.jpg" alt="Eight Grammys &amp; the Pepsi Accident" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">1984</span>
+              <h3>Eight Grammys &amp; the Pepsi Accident</h3>
+              <p>Thriller wins a record-breaking eight Grammy Awards in a single night. Days earlier, pyrotechnics set his hair alight during a Pepsi commercial shoot — an accident that deepens his legend.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item left">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-1984-victory.jpg" alt="The Victory Tour" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">1984</span>
+              <h3>The Victory Tour</h3>
+              <p>Michael tours North America with his brothers one final time, playing to packed stadiums before an estimated two million fans.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item right">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-1985-usa.jpg" alt="“We Are the World”" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">1985</span>
+              <h3>“We Are the World”</h3>
+              <p>Michael co-writes (with Lionel Richie) and performs on the USA for Africa charity anthem, assembling dozens of stars and raising millions for famine relief.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item left">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-1987-pepsi.jpg" alt="Bad" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">1987</span>
+              <h3>Bad</h3>
+              <p>The album Bad arrives with a Martin Scorsese-directed title video, and Michael launches his first-ever solo world tour.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item right">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-1988.jpg" alt="The Bad World Tour" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">1988</span>
+              <h3>The Bad World Tour</h3>
+              <p>The Bad World Tour plays 123 shows to about 4.4 million people, including a record seven sold-out nights at Wembley Stadium. Michael also buys Neverland Ranch.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item left">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-1990-bush.jpg" alt="A White House Visit" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">1990</span>
+              <h3>A White House Visit</h3>
+              <p>Michael is honoured at the White House as “Artist of the Decade” for his charitable work, a symbol of his extraordinary cultural reach.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item right">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-1992-live.jpg" alt="Dangerous" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">1991</span>
+              <h3>Dangerous</h3>
+              <p>Released November 26, Dangerous delivers “Black or White,” “Remember the Time” and “In the Closet,” and reasserts Michael as pop&#x27;s most ambitious innovator.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item left">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-1992-bucharest.jpg" alt="The Dangerous World Tour" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">1992</span>
+              <h3>The Dangerous World Tour</h3>
+              <p>The Dangerous World Tour opens, and his Bucharest concert is broadcast live to dozens of countries — one of the most-watched concerts ever televised.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item right">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-1992-monza.jpg" alt="Super Bowl XXVII" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">1993</span>
+              <h3>Super Bowl XXVII</h3>
+              <p>Michael&#x27;s halftime show at the Rose Bowl becomes one of the most-watched musical performances in American television history, ending with “Heal the World.”</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item left">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-1997-lausanne.jpg" alt="HIStory World Tour" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">1997</span>
+              <h3>HIStory World Tour</h3>
+              <p>Following the 1995 HIStory album, the HIStory World Tour becomes the highest-attended concert tour by a solo artist, drawing around 4.5 million people.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item right">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-1999-slash.jpg" alt="MJ &amp; Friends" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">1999</span>
+              <h3>MJ &amp; Friends</h3>
+              <p>Michael headlines charity concerts in Seoul and Munich, joined on stage by guests including Slash, raising funds for children&#x27;s causes around the world.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item left">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-2003-cable.jpg" alt="Invincible &amp; 30 Years" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">2001</span>
+              <h3>Invincible &amp; 30 Years</h3>
+              <p>Invincible is released, and two star-studded concerts at Madison Square Garden celebrate 30 years of Michael Jackson as a solo artist.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item right">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-2003-vegas.jpg" alt="Acquitted" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">2005</span>
+              <h3>Acquitted</h3>
+              <p>After a 14-week trial that dominates headlines worldwide, Michael is acquitted of all charges and vows to focus again on music and his family.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item left">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-2006-awards.jpg" alt="This Is It" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">2009</span>
+              <h3>This Is It</h3>
+              <p>Michael announces 50 sold-out shows at London&#x27;s O2 Arena under the banner “This Is It.” Rehearsals promise a spectacular return to the stage.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item right">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-2006-disney.jpg" alt="June 25" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">2009</span>
+              <h3>June 25</h3>
+              <p>On June 25, Michael Jackson dies at his Los Angeles home at the age of 50. Fans across the globe gather to mourn the loss of the King of Pop.</p>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item left">
+          <div class="tl-dot"></div>
+          <div class="tl-card">
+            <div class="tl-img"><img src="images/mj-walkoffame.jpg" alt="The Legacy" loading="lazy" /></div>
+            <div class="tl-body">
+              <span class="tl-year">2009</span>
+              <h3>The Legacy</h3>
+              <p>A star on the Hollywood Walk of Fame, a farewell film (This Is It), and countless tributes follow — and his music keeps reaching new generations every year.</p>
+            </div>
+          </div>
+        </div></div>
+</div></section>
+
+<!-- GALLERY -->
+<section id="years"><div class="wrap">
+  <div class="sec-head"><div class="tag">Gallery</div><h2>Through the Years</h2>
+    <p>An evolution in pictures, from the Jackson 5 to the final rehearsals.</p></div>
+  <div class="gallery">
+        <figure class="g-item">
+          <img src="images/jackson5-1971.jpg" alt="The Jackson 5, early 1970s" loading="lazy" />
+          <figcaption>The Jackson 5, early 1970s</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/jackson5-1972.jpg" alt="On tour with the Jackson 5, 1972" loading="lazy" />
+          <figcaption>On tour with the Jackson 5, 1972</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/jackson5-1974.jpg" alt="Michael, 1974" loading="lazy" />
+          <figcaption>Michael, 1974</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/jackson5-michael.jpg" alt="Fronting the family band, 1976" loading="lazy" />
+          <figcaption>Fronting the family band, 1976</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1977.jpg" alt="The Jacksons, 1977" loading="lazy" />
+          <figcaption>The Jacksons, 1977</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1981-quincy.jpg" alt="With Quincy Jones, 1981" loading="lazy" />
+          <figcaption>With Quincy Jones, 1981</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1982.jpg" alt="Thriller era, 1982" loading="lazy" />
+          <figcaption>Thriller era, 1982</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1983.jpg" alt="Motown 25, 1983" loading="lazy" />
+          <figcaption>Motown 25, 1983</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1983-closeup.jpg" alt="1983" loading="lazy" />
+          <figcaption>1983</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1984.jpg" alt="The Grammy-winning year, 1984" loading="lazy" />
+          <figcaption>The Grammy-winning year, 1984</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1984-victory.jpg" alt="Victory Tour, 1984" loading="lazy" />
+          <figcaption>Victory Tour, 1984</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1984-jacksons.jpg" alt="With the Jacksons, 1984" loading="lazy" />
+          <figcaption>With the Jacksons, 1984</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1985-usa.jpg" alt="We Are the World, 1985" loading="lazy" />
+          <figcaption>We Are the World, 1985</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1987-pepsi.jpg" alt="Bad era, 1987" loading="lazy" />
+          <figcaption>Bad era, 1987</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1988.jpg" alt="Bad World Tour, 1988" loading="lazy" />
+          <figcaption>Bad World Tour, 1988</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1988-in.jpg" alt="1988" loading="lazy" />
+          <figcaption>1988</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1988-himself.jpg" alt="1988" loading="lazy" />
+          <figcaption>1988</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1990-bush.jpg" alt="At the White House, 1990" loading="lazy" />
+          <figcaption>At the White House, 1990</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1992-bucharest.jpg" alt="Dangerous Tour, Bucharest 1992" loading="lazy" />
+          <figcaption>Dangerous Tour, Bucharest 1992</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1992-monza.jpg" alt="Live, 1992" loading="lazy" />
+          <figcaption>Live, 1992</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1992-live.jpg" alt="Dangerous era, 1992" loading="lazy" />
+          <figcaption>Dangerous era, 1992</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1996-perth.jpg" alt="HIStory Tour, Perth 1996" loading="lazy" />
+          <figcaption>HIStory Tour, Perth 1996</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1997-lausanne.jpg" alt="HIStory Tour, Lausanne 1997" loading="lazy" />
+          <figcaption>HIStory Tour, Lausanne 1997</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1997-stage.jpg" alt="HIStory Tour stage, 1997" loading="lazy" />
+          <figcaption>HIStory Tour stage, 1997</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-1999-slash.jpg" alt="MJ &amp; Friends, 1999" loading="lazy" />
+          <figcaption>MJ &amp; Friends, 1999</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-2003-cable.jpg" alt="2003" loading="lazy" />
+          <figcaption>2003</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-2003-vegas.jpg" alt="Las Vegas, 2003" loading="lazy" />
+          <figcaption>Las Vegas, 2003</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-2006-awards.jpg" alt="World Music Awards, 2006" loading="lazy" />
+          <figcaption>World Music Awards, 2006</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-2006-disney.jpg" alt="With his children, 2006" loading="lazy" />
+          <figcaption>With his children, 2006</figcaption>
+        </figure>
+        <figure class="g-item">
+          <img src="images/mj-walkoffame.jpg" alt="Star on the Hollywood Walk of Fame" loading="lazy" />
+          <figcaption>Star on the Hollywood Walk of Fame</figcaption>
+        </figure></div>
+</div></section>
+
+<!-- CONCERTS -->
+<section id="concerts"><div class="wrap">
+  <div class="sec-head"><div class="tag">Live</div><h2>Famous Concerts &amp; Tours</h2>
+    <p>The performances that redefined what a concert could be — and the tours that broke attendance
+    records around the world.</p></div>
+  <div class="concerts">
+        <article class="concert">
+          <div class="concert-img"><img src="images/mj-1983.jpg" alt="Motown 25" loading="lazy" />
+            <span class="concert-year">1983</span></div>
+          <div class="concert-body">
+            <h3>Motown 25</h3>
+            <div class="concert-venue">Pasadena Civic Auditorium, USA</div>
+            <p>The night the moonwalk was born. Michael&#x27;s “Billie Jean” performance turned a TV anniversary special into the most famous few minutes in pop.</p>
+          </div>
+        </article>
+        <article class="concert">
+          <div class="concert-img"><img src="images/mj-1984-jacksons.jpg" alt="Victory Tour" loading="lazy" />
+            <span class="concert-year">1984</span></div>
+          <div class="concert-body">
+            <h3>Victory Tour</h3>
+            <div class="concert-venue">North America · 55 shows</div>
+            <p>A final stadium run with the Jacksons, seen by roughly two million people and cementing Michael&#x27;s drawing power as a live act.</p>
+          </div>
+        </article>
+        <article class="concert">
+          <div class="concert-img"><img src="images/mj-1988.jpg" alt="Bad World Tour" loading="lazy" />
+            <span class="concert-year">1987–89</span></div>
+          <div class="concert-body">
+            <h3>Bad World Tour</h3>
+            <div class="concert-venue">Worldwide · 123 shows</div>
+            <p>His first solo tour and, at the time, the biggest and highest-grossing concert tour ever undertaken by a solo artist.</p>
+          </div>
+        </article>
+        <article class="concert">
+          <div class="concert-img"><img src="images/mj-1992-bucharest.jpg" alt="Dangerous World Tour" loading="lazy" />
+            <span class="concert-year">1992–93</span></div>
+          <div class="concert-body">
+            <h3>Dangerous World Tour</h3>
+            <div class="concert-venue">Worldwide · 69 shows</div>
+            <p>A theatrical blockbuster. The Bucharest show was broadcast live worldwide and remains one of the most celebrated concert films of all time.</p>
+          </div>
+        </article>
+        <article class="concert">
+          <div class="concert-img"><img src="images/mj-1992-monza.jpg" alt="Super Bowl XXVII Halftime" loading="lazy" />
+            <span class="concert-year">1993</span></div>
+          <div class="concert-body">
+            <h3>Super Bowl XXVII Halftime</h3>
+            <div class="concert-venue">Rose Bowl, USA</div>
+            <p>A jaw-dropping medley capped by “Heal the World.” The performance helped make the Super Bowl halftime show the cultural event it is today.</p>
+          </div>
+        </article>
+        <article class="concert">
+          <div class="concert-img"><img src="images/mj-1997-lausanne.jpg" alt="HIStory World Tour" loading="lazy" />
+            <span class="concert-year">1996–97</span></div>
+          <div class="concert-body">
+            <h3>HIStory World Tour</h3>
+            <div class="concert-venue">Worldwide · 82 shows</div>
+            <p>The highest-attended tour of his career and by any solo artist, playing to around 4.5 million fans across five continents.</p>
+          </div>
+        </article>
+        <article class="concert">
+          <div class="concert-img"><img src="images/mj-1999-slash.jpg" alt="MJ &amp; Friends" loading="lazy" />
+            <span class="concert-year">1999</span></div>
+          <div class="concert-body">
+            <h3>MJ &amp; Friends</h3>
+            <div class="concert-venue">Seoul &amp; Munich</div>
+            <p>Two enormous charity concerts for children&#x27;s charities, with a guest list that included Slash and a host of international stars.</p>
+          </div>
+        </article>
+        <article class="concert">
+          <div class="concert-img"><img src="images/mj-2003-cable.jpg" alt="30th Anniversary Special" loading="lazy" />
+            <span class="concert-year">2001</span></div>
+          <div class="concert-body">
+            <h3>30th Anniversary Special</h3>
+            <div class="concert-venue">Madison Square Garden, USA</div>
+            <p>Two nights honouring three decades of solo artistry, with surprise appearances from friends and peers across the music world.</p>
+          </div>
+        </article>
+        <article class="concert">
+          <div class="concert-img"><img src="images/mj-2006-awards.jpg" alt="This Is It" loading="lazy" />
+            <span class="concert-year">2009</span></div>
+          <div class="concert-body">
+            <h3>This Is It</h3>
+            <div class="concert-venue">The O2 Arena, London · 50 shows</div>
+            <p>A planned comeback residency that sold out 50 dates in minutes. Though it never happened, the rehearsals became the acclaimed film This Is It.</p>
+          </div>
+        </article></div>
+</div></section>
+
+<!-- ALBUMS -->
+<section id="albums"><div class="wrap">
+  <div class="sec-head"><div class="tag">Discography</div><h2>The Albums That Changed Music</h2></div>
+  <div class="albums">
+        <div class="album">
+          <div class="album-year">1979</div>
+          <div class="album-main"><h3>Off the Wall</h3><p>Don&#x27;t Stop &#x27;Til You Get Enough · Rock with You · She&#x27;s Out of My Life</p></div>
+        </div>
+        <div class="album">
+          <div class="album-year">1982</div>
+          <div class="album-main"><h3>Thriller</h3><p>Billie Jean · Beat It · Thriller · Wanna Be Startin&#x27; Somethin&#x27;</p></div>
+        </div>
+        <div class="album">
+          <div class="album-year">1987</div>
+          <div class="album-main"><h3>Bad</h3><p>Bad · The Way You Make Me Feel · Man in the Mirror · Smooth Criminal</p></div>
+        </div>
+        <div class="album">
+          <div class="album-year">1991</div>
+          <div class="album-main"><h3>Dangerous</h3><p>Black or White · Remember the Time · In the Closet · Heal the World</p></div>
+        </div>
+        <div class="album">
+          <div class="album-year">1995</div>
+          <div class="album-main"><h3>HIStory</h3><p>Scream · You Are Not Alone · Earth Song · They Don&#x27;t Care About Us</p></div>
+        </div>
+        <div class="album">
+          <div class="album-year">2001</div>
+          <div class="album-main"><h3>Invincible</h3><p>You Rock My World · Butterflies · Cry</p></div>
+        </div></div>
+  <p class="early"><b>Early solo albums:</b> Got to Be There (1972) · Ben (1972) · Music &amp; Me (1973) · Forever, Michael (1975)</p>
+</div></section>
+
+<!-- LEGACY -->
+<section id="legacy"><div class="wrap">
+  <div class="sec-head"><div class="tag">In His Words</div><h2>Quotes</h2></div>
+  <div class="quotes"><blockquote>“I&#x27;m never satisfied. I always want to do more.”</blockquote><blockquote>“In a world filled with hate, we must still dare to hope.”</blockquote><blockquote>“The greatest education in the world is watching the masters at work.”</blockquote><blockquote>“Let us dream of tomorrow where we can truly love from the soul.”</blockquote><blockquote>“If you enter this world knowing you are loved and you leave this world knowing the same, then everything that happens in between can be dealt with.”</blockquote></div>
+
+  <div class="sec-head" style="margin-top:3rem"><div class="tag">Forever</div><h2>The Legacy</h2></div>
+  <div class="story">
+    <div>
+      <p>Michael Jackson changed the sound of pop, the look of the music video, and the scale of live
+      performance. He made dances that the whole world learned, videos that played like cinema, and songs
+      that still fill dance floors more than forty years after they were written.</p>
+      <p>Since his passing, his influence has only grown. The concert film <em>This Is It</em> became one of
+      the highest-grossing documentaries ever released; Cirque du Soleil built two hit shows around his
+      catalogue; and the Broadway musical <em>MJ</em> brought his story to a new generation of theatregoers.
+      Posthumous albums like <em>Michael</em> and <em>Xscape</em> topped charts worldwide.</p>
+      <p>Inducted into the Rock &amp; Roll Hall of Fame and honoured with a star on the Hollywood Walk of
+      Fame, he is remembered not only as the King of Pop, but as one of the most influential artists in the
+      history of recorded music. The moonwalk, the glove, the fedora — they belong to him forever.</p>
+    </div>
+    <div class="card-img"><img src="images/mj-2006-awards.jpg" alt="Michael Jackson, 2006" /></div>
+  </div>
+</div></section>
+
+<div class="wrap">
+  <details class="credits">
+    <summary>Image credits &amp; licences (© their respective authors, via Wikimedia Commons)</summary>
+    <ul><li>ABC Television — <a href="https://commons.wikimedia.org/wiki/File%3AJackson_5_1971.jpg" target="_blank" rel="noopener">Public domain</a></li><li>CBS Television — <a href="https://commons.wikimedia.org/wiki/File%3AThe_Jackson_5_1972.JPG" target="_blank" rel="noopener">Public domain</a></li><li>The Jackson 5 — <a href="https://commons.wikimedia.org/wiki/File%3AJackson_5_1974_%28Michael%29.jpg" target="_blank" rel="noopener">Public domain</a></li><li>Unknown Author — <a href="https://commons.wikimedia.org/wiki/File%3AJackson_5_%28Michael%29.jpg" target="_blank" rel="noopener">Public domain</a></li><li>CBS Television — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_Jackson_1977.JPG" target="_blank" rel="noopener">Public domain</a></li><li>CBS Television — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_Jackson%2C_Diana_Ross%2C_Quincy_Jones%2C_%22Diana%22_%281981_CBS_press_photo%29.jpg" target="_blank" rel="noopener">Public domain</a></li><li>Unknown author; distributed by Epic Records — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_Jackson_1982_press_photo.png" target="_blank" rel="noopener">Public domain</a></li><li>Matthew Rolston — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_Jackson_in_1983.jpg" target="_blank" rel="noopener">Public domain</a></li><li>Uncredited (likely Matthew Rolston); Distributed by Epic Records — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_Jackson_1983_%28close_up%29.jpg" target="_blank" rel="noopener">Public domain</a></li><li>Epic Records — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_Jackson_1984_publicity_photo.jpg" target="_blank" rel="noopener">Public domain</a></li><li>Larry Davis, Los Angeles Times — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_Jackson%2C_Victory_Tour%2C_Arrowhead_Stadium%2C_1984.jpg" target="_blank" rel="noopener">CC BY 4.0</a></li><li>Goldin — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_Jackson_with_the_Jacksons_at_Victory_Tour%2C_July_1984.jpg" target="_blank" rel="noopener">Public domain</a></li><li>Toglenn — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_Jackson_autographing_%27We_Are_The_World%27_posters_1985.jpg" target="_blank" rel="noopener">CC BY-SA 4.0</a></li><li>George Reynolds — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_Jackson_%22Star_on_Wheels%22_1987_Pepsi_photo.jpg" target="_blank" rel="noopener">Public domain</a></li><li>Alan Light — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_Jackson_1988.jpg" target="_blank" rel="noopener">CC BY 2.0</a></li><li>Zoran Veselinovic — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_Jackson_in_1988.jpg" target="_blank" rel="noopener">CC BY-SA 2.0</a></li><li>Alan Light — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_1988_by_himself.jpg" target="_blank" rel="noopener">CC BY 2.0</a></li><li>George H. W. Bush Presidential Library — <a href="https://commons.wikimedia.org/wiki/File%3APresident_Bush_greets_Michael_Jackson_in_the_Oval_Office_%28P11547-02A%29.jpg" target="_blank" rel="noopener">Public domain</a></li><li>Salabasev — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_Jackson_Live_in_Bucharest_1992_Toni_Salabasev.jpg" target="_blank" rel="noopener">CC BY-SA 4.0</a></li><li>File:Michael Jackson (21024273069).jpg: BevinKacon
+derivative work: Adrián José — <a href="https://commons.wikimedia.org/wiki/File%3A%22Will_You_Be_There%22_performance_at_Monza_%28July_6%2C_1992%29.jpg" target="_blank" rel="noopener">CC BY-SA 2.0</a></li><li>Daniele Dalledonne from Trento, Italy — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_Jackson_%2820589951783%29.jpg" target="_blank" rel="noopener">CC BY-SA 2.0</a></li><li>John M. Wheatley — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_Jackson_in_Perth_Wheatley.jpg" target="_blank" rel="noopener">GFDL 1.2</a></li><li>user:Jamcib — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_Jackson_Lausanne_20_juin_1997.jpg" target="_blank" rel="noopener">CC BY-SA 4.0</a></li><li>MJJ-777 — <a href="https://commons.wikimedia.org/wiki/File%3AMJ_HIStory_Tour_stage_June_18%2C_1997.jpg" target="_blank" rel="noopener">CC BY-SA 4.0</a></li><li>MJJ-777 — <a href="https://commons.wikimedia.org/wiki/File%3AMJ%26Friends-Munich_1999-Michael_Jackson_and_Slash_on_stage.jpg" target="_blank" rel="noopener">CC BY-SA 4.0</a></li><li>INTX: The Internet &amp; Television Expo — <a href="https://commons.wikimedia.org/wiki/File%3A2003_Michael_Jackson_at_The_Cable_Show_%2829358712934%29.jpg" target="_blank" rel="noopener">CC BY 2.0</a></li><li>Keir Whitaker from Bath, UK — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_Jackson_in_Vegas.jpg" target="_blank" rel="noopener">CC BY 2.0</a></li><li>Threatened1 — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_Jackson_at_2006%27s_World_Music_Awards_in_London_%281%29.jpg" target="_blank" rel="noopener">CC BY-SA 2.0</a></li><li>JJ Merelo — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_Jackson_and_his_children_in_Disneyland_Paris_%283720831634%29.jpg" target="_blank" rel="noopener">CC BY-SA 2.0</a></li><li>The original uploader was SlimVirgin at English Wikipedia. — <a href="https://commons.wikimedia.org/wiki/File%3AMichael_Jackson_Star_on_Hollywood_Blvd_%28cropped%29.jpg" target="_blank" rel="noopener">CC BY 2.0</a></li></ul>
+  </details>
+  <footer>
+    A fan-made tribute for informational and educational purposes. Michael Jackson · 1958–2009.
+    This site is not affiliated with the Jackson estate.
+  </footer>
+</div>
+
+</body>
+</html>
