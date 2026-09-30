@@ -132,46 +132,46 @@ CONCERTS = [
 # ---------------------------------------------------------------- songs (album -> popular songs with official YouTube IDs)
 SONGS = [
  ("Off the Wall", "1979", [
-   ("Don't Stop 'Til You Get Enough", "yURRmWtbTbo"),
-   ("Rock with You", "5X-Mrc2l1d0"),
-   ("Off the Wall", "MYPI0HZGVR4"),
-   ("She's Out of My Life", "6DQJPL9Yuq0"),
+   ("Don't Stop 'Til You Get Enough", "yURRmWtbTbo", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/72/26/09/72260919-0e9c-6d74-7898-ef92e2867e3d/mzaf_16775183321703742233.plus.aac.p.m4a"),
+   ("Rock with You", "5X-Mrc2l1d0", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/ba/c3/12/bac31216-bfc5-68dd-1f86-955777ba5c77/mzaf_5177525496066876810.plus.aac.p.m4a"),
+   ("Off the Wall", "MYPI0HZGVR4", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b2/0d/54/b20d5435-1536-ea69-4e4a-a7485164aa46/mzaf_15141501831603668160.plus.aac.p.m4a"),
+   ("She's Out of My Life", "6DQJPL9Yuq0", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/93/48/74/934874a4-7ac8-34d1-3e24-58f159a154ff/mzaf_13990381157638978208.plus.aac.p.m4a"),
  ]),
  ("Thriller", "1982", [
-   ("Wanna Be Startin' Somethin'", "DsJlttdkybk"),
-   ("The Girl Is Mine", "wHuRX5Or3ts"),
-   ("Billie Jean", "Zi_XLOBDo_Y"),
-   ("Beat It", "oRdxUFDoQe0"),
-   ("Human Nature", "YNzuiRuQNYY"),
-   ("P.Y.T. (Pretty Young Thing)", "V-l28QqV3jo"),
-   ("Thriller", "sOnqjkJTMaA"),
+   ("Wanna Be Startin' Somethin'", "DsJlttdkybk", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/81/9a/e4/819ae4ff-12b7-35c4-6fca-2923fb16852c/mzaf_10788836398273150393.plus.aac.p.m4a"),
+   ("The Girl Is Mine", "wHuRX5Or3ts", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/2d/38/1e/2d381e88-68e9-2bb9-7b00-d0c6366f8db6/mzaf_12594152365957446372.plus.aac.p.m4a"),
+   ("Billie Jean", "Zi_XLOBDo_Y", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/dc/bc/8a/dcbc8a3e-4ce1-c00d-cc02-eda2212053c7/mzaf_8347559338388601510.plus.aac.p.m4a"),
+   ("Beat It", "oRdxUFDoQe0", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/88/cd/46/88cd46bd-dba7-1dc2-a63b-e8c111ac4fc3/mzaf_4042555053237612653.plus.aac.p.m4a"),
+   ("Human Nature", "YNzuiRuQNYY", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/5b/f8/a1/5bf8a1ce-68a9-896b-b9de-abbba22bc65a/mzaf_2514540964270694755.plus.aac.p.m4a"),
+   ("P.Y.T. (Pretty Young Thing)", "V-l28QqV3jo", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/b4/b4/24/b4b42455-0fcc-7e16-52ad-f896de9bc88d/mzaf_14227056241100382943.plus.aac.p.m4a"),
+   ("Thriller", "sOnqjkJTMaA", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/58/8c/cb/588ccb9a-ab79-4a38-43b5-d4c24ea42859/mzaf_2083607504726567992.plus.aac.p.m4a"),
  ]),
  ("Bad", "1987", [
-   ("I Just Can't Stop Loving You", "PHZ1Bii7Uwk"),
-   ("Bad", "Sd4SJVsTulc"),
-   ("The Way You Make Me Feel", "HzZ_urpj4As"),
-   ("Man in the Mirror", "PivWY9wn5ps"),
-   ("Dirty Diana", "yUi_S6YWjZw"),
-   ("Smooth Criminal", "h_D3VFfhvs4"),
+   ("I Just Can't Stop Loving You", "PHZ1Bii7Uwk", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/b6/96/73/b696734f-2c83-f8e7-bdc2-4baecba3c305/mzaf_13442030902365922706.plus.aac.p.m4a"),
+   ("Bad", "Sd4SJVsTulc", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/6e/fd/d8/6efdd854-cdd6-7a9c-829c-7ab8f26255da/mzaf_12994914028555183905.plus.aac.p.m4a"),
+   ("The Way You Make Me Feel", "HzZ_urpj4As", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/85/2c/ac/852cac8a-03b6-16f6-80f3-d6a6dabe5526/mzaf_4219499635052100711.plus.aac.p.m4a"),
+   ("Man in the Mirror", "PivWY9wn5ps", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/16/a7/47/16a74768-fb69-222f-df93-71712a8a92bb/mzaf_16043816600232794671.plus.aac.p.m4a"),
+   ("Dirty Diana", "yUi_S6YWjZw", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/5f/23/21/5f232152-e6b4-c6e6-d4a1-2c7bbf58ec51/mzaf_16376436957965864463.plus.aac.p.m4a"),
+   ("Smooth Criminal", "h_D3VFfhvs4", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/38/7d/84/387d847b-0a17-d7d0-81fa-3d1e2036a0e3/mzaf_1148403634523455455.plus.aac.p.m4a"),
  ]),
  ("Dangerous", "1991", [
-   ("Black or White", "F2AitTPI5U0"),
-   ("Remember the Time", "LeiFF0gvqcc"),
-   ("In the Closet", "4qLY0vbrT8Q"),
-   ("Jam", "JbHI1yI1Ndk"),
-   ("Heal the World", "BWf-eARnf6U"),
+   ("Black or White", "F2AitTPI5U0", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/69/01/0c/69010c8e-2ff7-2809-589d-6f304400a359/mzaf_3468624104964279051.plus.aac.p.m4a"),
+   ("Remember the Time", "LeiFF0gvqcc", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/04/20/8c/04208c8c-d0c6-8c68-e8a5-a8b68a7f84bf/mzaf_4848794313180257737.plus.aac.p.m4a"),
+   ("In the Closet", "4qLY0vbrT8Q", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/3d/fe/da/3dfedab8-6aba-8568-f5f7-8c869bb51e0d/mzaf_8057663498212566337.plus.aac.p.m4a"),
+   ("Jam", "JbHI1yI1Ndk", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/c6/ef/ac/c6efac46-31b5-7d32-b86c-2dfef070ca04/mzaf_18174775566700350433.plus.aac.p.m4a"),
+   ("Heal the World", "BWf-eARnf6U", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/af/b8/2a/afb82ab9-4d03-b411-28e0-e1147a63d7f3/mzaf_9153062902493431263.plus.aac.p.m4a"),
  ]),
  ("HIStory", "1995", [
-   ("Scream", "0P4A1K4lXDo"),
-   ("You Are Not Alone", "pAyKJAtDNCw"),
-   ("Earth Song", "XAi3VTSdTxU"),
-   ("They Don't Care About Us", "t1pqi8vjTLY"),
-   ("Stranger in Moscow", "pEEMi2j6lYE"),
+   ("Scream", "0P4A1K4lXDo", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/bc/8f/6d/bc8f6db1-b276-c3b9-6f59-a032f848c3bc/mzaf_5575736724782222399.plus.aac.p.m4a"),
+   ("You Are Not Alone", "pAyKJAtDNCw", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/91/72/6e/91726ec4-e98e-adba-e81c-ad300a2ef12d/mzaf_1649969625520359227.plus.aac.p.m4a"),
+   ("Earth Song", "XAi3VTSdTxU", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/58/dd/d1/58ddd101-3566-54a8-6adf-c7ae9ab4c94b/mzaf_13656181972576293865.plus.aac.p.m4a"),
+   ("They Don't Care About Us", "t1pqi8vjTLY", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/7b/d8/3c/7bd83c67-daf5-1588-5ab7-a1a322bfa78a/mzaf_7553543206297870119.plus.aac.p.m4a"),
+   ("Stranger in Moscow", "pEEMi2j6lYE", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview221/v4/f7/e2/b5/f7e2b54a-8cef-6f7f-1329-442d83b63bb2/mzaf_8125111824071385492.plus.aac.p.m4a"),
  ]),
  ("Invincible", "2001", [
-   ("You Rock My World", "1-7ABIM2qjU"),
-   ("Butterflies", "QxnnAx9ED4M"),
-   ("Cry", "mj3MfUR35CM"),
+   ("You Rock My World", "1-7ABIM2qjU", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/cb/ce/a1/cbcea179-947c-8098-3295-82c1bcaa461a/mzaf_6015153739247777119.plus.aac.p.m4a"),
+   ("Butterflies", "QxnnAx9ED4M", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/27/9b/ac/279bace1-652b-f5ce-2b70-30c39a55c196/mzaf_15902599619470153049.plus.aac.p.m4a"),
+   ("Cry", "mj3MfUR35CM", "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/e9/27/e6/e927e666-dedc-f635-0c2d-7debad648d13/mzaf_18084034880157077544.plus.aac.p.m4a"),
  ]),
 ]
 SOLO_EARLY = [
@@ -272,9 +272,10 @@ def fmt_albums():
     out = []
     for name, year, tracks in SONGS:
         rows = []
-        for i, (title, vid) in enumerate(tracks, 1):
+        for i, (title, vid, prev) in enumerate(tracks, 1):
             rows.append(
-                f'<li><button class="play" data-id="{vid}" aria-label="Play {html.escape(title)}">\u25b6</button>'
+                f'<li><button class="play" data-preview="{prev}" title="Play a 30-second ad-free preview" aria-label="Ad-free preview of {html.escape(title)}">\u25b6</button>'
+                f'<button class="vid" data-id="{vid}" title="Watch the full video (YouTube)" aria-label="Watch the {html.escape(title)} video">\U0001F3AC</button>'
                 f'<span class="tnum">{i}</span><span class="tname">{html.escape(title)}</span></li>')
         out.append(f"""
         <div class="album">
@@ -306,17 +307,33 @@ HERO_IMG = ipath("mj-1992-bucharest")
 SONGS_JS = """
 <script>
 (function(){
-  var f=document.getElementById('ytPlayer'), ph=document.getElementById('playerPlaceholder'),
-      now=document.getElementById('nowPlaying'), box=document.getElementById('playerBox');
+  var audio=document.getElementById('audioEl'), iframe=document.getElementById('ytPlayer'),
+      panel=document.getElementById('audioPanel'), ph=document.getElementById('playerPlaceholder'),
+      title=document.getElementById('audioTitle'), now=document.getElementById('nowPlaying');
+  function clear(){ document.querySelectorAll('.tracks button').forEach(function(x){x.classList.remove('active');}); }
+  // ▶ ad-free 30-second preview
   document.querySelectorAll('.play').forEach(function(b){
     b.addEventListener('click',function(){
-      var li=b.closest('li'), name=li.querySelector('.tname').textContent, id=b.getAttribute('data-id');
-      f.src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1';
+      var name=b.closest('li').querySelector('.tname').textContent;
+      audio.src=b.getAttribute('data-preview');
+      var pr=audio.play(); if(pr&&pr.catch) pr.catch(function(){});
+      panel.classList.add('show'); iframe.hidden=true; iframe.removeAttribute('src');
       if(ph) ph.classList.add('hide');
-      if(now) now.textContent=name;
-      document.querySelectorAll('.play').forEach(function(x){x.classList.remove('active');});
-      b.classList.add('active');
-      if(box && box.scrollIntoView && window.innerWidth<720) box.scrollIntoView({behavior:'smooth',block:'center'});
+      title.textContent=name; now.textContent=name;
+      clear(); b.classList.add('active');
+    });
+  });
+  // 🎬 full video (YouTube)
+  document.querySelectorAll('.vid').forEach(function(b){
+    b.addEventListener('click',function(){
+      var name=b.closest('li').querySelector('.tname').textContent;
+      try{ audio.pause(); }catch(e){}
+      panel.classList.remove('show'); iframe.hidden=false;
+      iframe.src='https://www.youtube-nocookie.com/embed/'+b.getAttribute('data-id')+
+        '?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1';
+      if(ph) ph.classList.add('hide');
+      now.textContent=name+'  (video)';
+      clear(); b.classList.add('active');
     });
   });
 })();
@@ -451,16 +468,26 @@ HTML = f"""<!DOCTYPE html>
   .player{{position:sticky;top:62px;z-index:30;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);
     gap:1rem;background:linear-gradient(180deg,#1c1c24,#141419);border:1px solid var(--line);border-radius:1rem;
     padding:.9rem;margin-bottom:1.5rem;box-shadow:0 14px 34px rgba(0,0,0,.45)}}
-  .player-frame{{position:relative;aspect-ratio:16/9;border-radius:.6rem;overflow:hidden;background:#000;border:1px solid var(--line)}}
+  .player-frame{{position:relative;aspect-ratio:16/9;border-radius:.6rem;overflow:hidden;background:#0b0b10;border:1px solid var(--line)}}
   .player-frame iframe{{position:absolute;inset:0;width:100%;height:100%;border:0}}
+  .audio-panel{{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;gap:.8rem;
+    padding:1rem;background:radial-gradient(420px 240px at 50% 35%, rgba(224,11,43,.30), transparent 72%)}}
+  .audio-panel.show{{display:flex}}
+  .audio-panel audio{{width:min(100%,420px)}}
+  .audio-title{{font-family:"Bebas Neue",sans-serif;font-size:clamp(1.1rem,3vw,1.6rem);text-align:center}}
+  .eq{{display:flex;gap:5px;align-items:flex-end;height:34px}}
+  .eq i{{width:6px;height:10px;background:var(--gold);border-radius:3px;animation:eq .9s ease-in-out infinite}}
+  .eq i:nth-child(1){{animation-delay:0s}} .eq i:nth-child(2){{animation-delay:.15s}}
+  .eq i:nth-child(3){{animation-delay:.3s}} .eq i:nth-child(4){{animation-delay:.45s}} .eq i:nth-child(5){{animation-delay:.6s}}
+  @keyframes eq{{0%,100%{{height:9px}}50%{{height:32px}}}}
   .player-placeholder{{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;
-    color:var(--muted);font-weight:700;padding:1rem;font-size:.95rem;
-    background:radial-gradient(400px 200px at 50% 40%, rgba(224,11,43,.25), transparent 70%)}}
+    color:var(--muted);font-weight:700;padding:1rem;font-size:.95rem}}
   .player-placeholder.hide{{display:none}}
   .player-info{{display:flex;flex-direction:column;justify-content:center;gap:.2rem}}
   .player-now{{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--red);font-weight:700}}
   .player-name{{font-family:"Bebas Neue",sans-serif;font-size:clamp(1.3rem,3vw,1.9rem);line-height:1.05}}
-  .player-note{{font-size:.72rem;color:var(--muted);margin-top:.35rem}}
+  .player-note{{font-size:.72rem;color:var(--muted);margin-top:.35rem;line-height:1.5}}
+  .player-note b{{color:var(--gold)}}
   .albums{{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(330px,1fr))}}
   .album{{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);
     border-left:3px solid var(--red);border-radius:.8rem;padding:1rem 1.1rem}}
@@ -470,10 +497,14 @@ HTML = f"""<!DOCTYPE html>
   .tracks{{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.25rem}}
   .tracks li{{display:flex;align-items:center;gap:.6rem;padding:.3rem .4rem;border-radius:.5rem;transition:background .15s}}
   .tracks li:hover{{background:rgba(255,255,255,.05)}}
-  .tracks .play{{flex:none;width:30px;height:30px;border-radius:50%;border:0;background:var(--red);color:#fff;
-    font-size:.72rem;line-height:1;cursor:pointer;display:grid;place-items:center;transition:transform .12s,background .15s}}
+  .tracks button{{flex:none;width:30px;height:30px;border-radius:50%;border:0;color:#fff;font-size:.72rem;line-height:1;
+    cursor:pointer;display:grid;place-items:center;transition:transform .12s,background .15s}}
+  .tracks .play{{background:var(--red)}}
   .tracks .play:hover{{transform:scale(1.12)}}
   .tracks .play.active{{background:var(--gold);color:#111}}
+  .tracks .vid{{background:#2b2b38;font-size:.68rem}}
+  .tracks .vid:hover{{transform:scale(1.12);background:#3a3a4c}}
+  .tracks .vid.active{{background:var(--gold);color:#111}}
   .tnum{{width:1rem;text-align:right;color:var(--muted);font-size:.76rem}}
   .tname{{flex:1;font-weight:600;font-size:.9rem}}
   .early{{margin-top:1rem;color:var(--muted);font-size:.85rem}}
@@ -585,16 +616,24 @@ HTML = f"""<!DOCTYPE html>
 <!-- ALBUMS / SONGS -->
 <section id="albums"><div class="wrap">
   <div class="sec-head"><div class="tag">Discography</div><h2>The Songs You Can Play</h2>
-    <p>The most popular song from every album — press <b>\u25b6</b> to play the official video right here. 🎵</p></div>
+    <p>The most popular song from every album — press <b>\u25b6</b> to play a 30-second <b>ad-free preview</b>, or 🎬 for the full official video. 🎵</p></div>
   <div class="player" id="playerBox">
     <div class="player-frame">
-      <iframe id="ytPlayer" title="Song player" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
-      <div class="player-placeholder" id="playerPlaceholder">🎵 Pick a song below and press ▶</div>
+      <div class="audio-panel" id="audioPanel">
+        <div class="eq"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="audio-title" id="audioTitle">Ad-free preview</div>
+        <audio id="audioEl" controls preload="none"></audio>
+      </div>
+      <iframe id="ytPlayer" title="Video player" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen hidden></iframe>
+      <div class="player-placeholder" id="playerPlaceholder">🎵 Pick a song below!</div>
     </div>
     <div class="player-info">
       <div class="player-now">Now playing</div>
       <div class="player-name" id="nowPlaying">Nothing yet…</div>
-      <div class="player-note">Plays the official video via YouTube. Songs © their respective owners.</div>
+      <div class="player-note">
+        <b>▶</b> plays a 30-second <b>ad-free preview</b> · <b>🎬</b> plays the full video on YouTube.<br/>
+        Songs © their respective owners.
+      </div>
     </div>
   </div>
   <div class="albums">{fmt_albums()}</div>
